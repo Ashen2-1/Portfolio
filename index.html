@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom Li | AI · Robotics · Embedded Systems</title>
+<meta name="description" content="Tom Li — Computer Engineering student at the University of Waterloo working across AI, robotics, embedded systems, and autonomous sensing.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <a class="brand" href="#top">TL</a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="mailto:c85li@uwaterloo.ca">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero container">
+  <div>
+    <p class="eyebrow">COMPUTER ENGINEERING @ WATERLOO</p>
+    <h1>I build <span>AI systems</span>, autonomous sensing platforms, and embedded software.</h1>
+    <p class="sub">I work across multimodal AI, full-stack software, robotics, LiDAR/IMU sensing, and rapid prototyping — turning technical ideas into working systems.</p>
+    <div class="actions">
+      <a class="button primary" href="#projects">View projects</a>
+      <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a class="button" href="mailto:c85li@uwaterloo.ca">Email</a>
+    </div>
+  </div>
+  <aside class="focus-card">
+    <p class="eyebrow">CURRENT FOCUS</p>
+    <h3>AI + Autonomous Systems</h3>
+    <p><b>AI</b><br>PyTorch · RAG · VLM · FastAPI · React</p>
+    <p><b>Robotics</b><br>ROS 2 · LiDAR · IMU · SLAM · 3D Mapping</p>
+    <p><b>Embedded</b><br>C++ · Linux · Raspberry Pi · STM32</p>
+  </aside>
+</section>
+
+<section class="stats container">
+  <div><strong>300,000+</strong><span>aerospace records/run</span></div>
+  <div><strong>&lt;20 min</strong><span>analysis runtime</span></div>
+  <div><strong>~98%</strong><span>agreement with reference</span></div>
+  <div><strong>Hult Prize</strong><span>national round — NEXO</span></div>
+</section>
+
+<section id="projects" class="section container">
+  <p class="eyebrow">SELECTED WORK</p>
+  <h2>Projects</h2>
+
+  <article class="project featured-project">
+    <div class="visual image-wrap">
+      <img src="assets/nexo-workspace.png" alt="NEXO multimodal research workspace with uploaded PDFs and AI chat">
+    </div>
+    <div class="copy">
+      <div class="meta">AI + FULL-STACK · 2026</div>
+      <h3>NEXO — Multimodal AI Research Platform</h3>
+      <p>A full-stack research environment that combines a visual workspace, source-grounded AI, document retrieval, and multimodal reasoning across documents and images.</p>
+      <h4>My contribution</h4>
+      <p>Co-led the platform from product direction through AI/backend integration, connecting a React frontend to FastAPI/Python services and PostgreSQL-backed research workflows.</p>
+      <h4>AI pipeline</h4>
+      <p>OCR → chunking → embeddings → vector retrieval → grounded generation, plus a 7B vision-language model using PyTorch and Hugging Face Transformers.</p>
+      <div class="tags"><span>Python</span><span>PyTorch</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>RAG</span><span>VLM</span></div>
+      <div class="project-actions">
+        <a class="button primary" href="https://nexo-art-research.vercel.app/" target="_blank" rel="noreferrer">Live Demo ↗</a>
+        <span class="award">Hult Prize National Round</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="gallery">
+    <figure><img src="assets/nexo-welcome.png" alt="NEXO welcome and onboarding page"><figcaption>Onboarding / product walkthrough</figcaption></figure>
+    <figure><img src="assets/nexo-canvas.png" alt="NEXO visual research canvas"><figcaption>Visual canvas for organizing research materials</figcaption></figure>
+    <figure><img src="assets/nexo-database.png" alt="NEXO database search"><figcaption>Academic source discovery</figcaption></figure>
+    <figure><img src="assets/nexo-chat.png" alt="NEXO source-grounded AI chat"><figcaption>Source-grounded question answering</figcaption></figure>
+  </div>
+
+  <article class="project">
+    <div class="visual placeholder">LiDAR handheld / RViz image coming next</div>
+    <div class="copy">
+      <div class="meta">ROBOTICS + EMBEDDED · 2026</div>
+      <h3>LiDAR–IMU Mapping & UAV Perception Platform</h3>
+      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python, designed to move from handheld mapping toward autonomous aerial perception.</p>
+      <h4>System integration</h4>
+      <p>Real-time PointCloud2 and ~200 Hz IMU streaming, portable power, Ethernet communication, headless recording, PLY export, and 3D-printed mechanical integration.</p>
+      <h4>Perception</h4>
+      <p>Confidence filtering, voxel downsampling, occupancy/density/height-aware mapping, with LiDAR–IMU SLAM and sensor-fusion workflows under development.</p>
+      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>SLAM</span></div>
+    </div>
+  </article>
+
+  <article class="project compact">
+    <div class="copy">
+      <div class="meta">UAV HARDWARE · 2026</div>
+      <h3>5-inch FPV UAV Build & Integration</h3>
+      <p>Built a component-level FPV quadrotor including the carbon frame, F4 flight controller, 45A ESC, brushless motors, FPV system, power wiring, soldering, and mechanical integration — as a platform for future autonomous sensing work.</p>
+      <div class="tags"><span>Flight Controller</span><span>ESC</span><span>FPV</span><span>Soldering</span><span>CAD</span><span>3D Printing</span></div>
+    </div>
+    <div class="visual small placeholder">Drone photo coming later</div>
+  </article>
+
+  <article class="project compact">
+    <div class="copy">
+      <div class="meta">COMPETITION ROBOTICS</div>
+      <h3>FRC / FTC — Vision, Controls & Mechanism Development</h3>
+      <p>Designed and iterated a roller-intake mechanism that reduced pickup-to-placement cycle time by 38–40%, and implemented AprilTag-based autonomous vision in Java for field-target detection and parking behavior.</p>
+      <div class="tags"><span>Java</span><span>Controls</span><span>AprilTag</span><span>CAD</span><span>Rapid Prototyping</span></div>
+    </div>
+    <div class="visual small placeholder">Robot / intake photo coming later</div>
+  </article>
+</section>
+
+<section id="experience" class="section alt">
+  <div class="container">
+    <p class="eyebrow">EXPERIENCE</p>
+    <h2>Engineering in practice</h2>
+    <div class="experience">
+      <div>
+        <h3>National Research Council of Canada</h3>
+        <p class="muted">Aerospace Research Centre · Research Assistant · Sep 2024 – Apr 2025</p>
+        <p>Built a Python analysis framework processing 300,000+ aerospace fatigue records per run in under 20 minutes, replacing workflows that previously took weeks.</p>
+        <p>Developed automated signal-processing and statistical analysis methods with ~98% agreement to reference estimates. Work supported an IP filing and industry technology transfer.</p>
+      </div>
+      <div>
+        <h3>The STEAM Project</h3>
+        <p class="muted">STEAM Program Instructor · May 2026 – Aug 2026</p>
+        <p>Developed and delivered 20+ STEAM and robotics learning projects from prototype to classroom deployment.</p>
+        <p>Taught ~120 students across four program sections and translated technical concepts into hands-on learning activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section container">
+  <p class="eyebrow">ABOUT</p>
+  <h2>Built across disciplines.</h2>
+  <p class="about">I’m a Computer Engineering co-op student at the University of Waterloo interested in AI systems, robotics, autonomous perception, and embedded software. I like projects where software has to interact with the real world: sensors, hardware, noisy data, users, and constraints.</p>
+  <div class="actions">
+    <a class="button primary" href="mailto:c85li@uwaterloo.ca">Contact me</a>
+    <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="container">Tom Li · Computer Engineering · University of Waterloo</footer>
+</body>
+</html>
