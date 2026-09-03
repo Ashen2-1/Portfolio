@@ -16,3 +16,5 @@ nav{height:68px;display:flex;align-items:center;justify-content:space-between}.b
 .about{max-width:800px;font-size:18px;color:#a7adb6}footer{border-top:1px solid #282b30;padding:28px 0 45px;color:#737a84;font-size:12px}
 @media(max-width:850px){.hero{grid-template-columns:1fr}.hero h1{font-size:50px}.stats{grid-template-columns:1fr 1fr}.project,.project.compact{grid-template-columns:1fr}.visual{border-right:0;border-bottom:1px solid #292d33;min-height:280px}.experience,.gallery{grid-template-columns:1fr}}
 @media(max-width:560px){.links a:not(:last-child){display:none}.hero h1{font-size:42px}.stats{grid-template-columns:1fr}.section{padding:70px 0}.copy{padding:22px}.gallery img{height:210px}}
+.lidar-gallery{grid-template-columns:repeat(3,1fr)}
+@media(max-width:850px){.lidar-gallery{grid-template-columns:1fr}}

@@ -80,18 +80,26 @@
   </div>
 
   <article class="project">
-    <div class="visual placeholder">LiDAR handheld / RViz image coming next</div>
+    <div class="visual image-wrap">
+      <img src="assets/lidar-risk-5cm.png" alt="Height-aware LiDAR terrain risk map">
+    </div>
     <div class="copy">
       <div class="meta">ROBOTICS + EMBEDDED · 2026</div>
-      <h3>LiDAR–IMU Mapping & UAV Perception Platform</h3>
-      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python, designed to move from handheld mapping toward autonomous aerial perception.</p>
-      <h4>System integration</h4>
-      <p>Real-time PointCloud2 and ~200 Hz IMU streaming, portable power, Ethernet communication, headless recording, PLY export, and 3D-printed mechanical integration.</p>
-      <h4>Perception</h4>
-      <p>Confidence filtering, voxel downsampling, occupancy/density/height-aware mapping, with LiDAR–IMU SLAM and sensor-fusion workflows under development.</p>
-      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>SLAM</span></div>
+      <h3>LiDAR–IMU Autonomous Perception Platform</h3>
+      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python, with current work spanning sensor acquisition, point-cloud processing, terrain analysis, and ongoing SLAM development.</p>
+      <h4>Validated pipeline</h4>
+      <p>LiDAR/IMU acquisition → PointCloud2 + ~200 Hz IMU streaming → filtering → voxel processing → height analysis → terrain / obstacle risk mapping.</p>
+      <h4>In development</h4>
+      <p>LiDAR–IMU motion compensation, scan matching, localization, SLAM, decision modeling, and eventual UAV deployment.</p>
+      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>SLAM</span><span>3D Mapping</span></div>
     </div>
   </article>
+
+  <div class="gallery lidar-gallery">
+    <figure><img src="assets/lidar-imu-motion.png" alt="IMU motion feedback plot"><figcaption>IMU motion-state analysis using gyroscope and acceleration signals.</figcaption></figure>
+    <figure><img src="assets/lidar-height-5cm.png" alt="5 cm voxel height-range map"><figcaption>5 cm voxel height-range map for local vertical variation.</figcaption></figure>
+    <figure><img src="assets/lidar-risk-5cm.png" alt="Height-aware terrain risk map"><figcaption>Height-aware risk map: flat, caution, and obstacle regions.</figcaption></figure>
+  </div>
 
   <article class="project compact">
     <div class="copy">
