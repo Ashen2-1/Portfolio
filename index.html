@@ -24,8 +24,8 @@
 <section class="hero container">
   <div>
     <p class="eyebrow">COMPUTER ENGINEERING @ WATERLOO</p>
-    <h1>I build <span>AI systems</span>, autonomous sensing platforms, and embedded software.</h1>
-    <p class="sub">I work across multimodal AI, full-stack software, robotics, LiDAR/IMU sensing, and rapid prototyping — turning technical ideas into working systems.</p>
+    <h1>I build <span>AI systems</span>, robotics perception platforms, and embedded software.</h1>
+    <p class="sub">I work across multimodal AI, full-stack software, robotics, LiDAR/IMU sensing, and rapid prototyping — turning technical ideas into working systems that can be tested in the real world.</p>
     <div class="actions">
       <a class="button primary" href="#projects">View projects</a>
       <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -36,7 +36,7 @@
     <p class="eyebrow">CURRENT FOCUS</p>
     <h3>AI + Autonomous Systems</h3>
     <p><b>AI</b><br>PyTorch · RAG · VLM · FastAPI · React</p>
-    <p><b>Robotics</b><br>ROS 2 · LiDAR · IMU · SLAM · 3D Mapping</p>
+    <p><b>Robotics</b><br>ROS 2 · LiDAR · IMU · Point Clouds · 3D Mapping</p>
     <p><b>Embedded</b><br>C++ · Linux · Raspberry Pi · STM32</p>
   </aside>
 </section>
@@ -45,7 +45,7 @@
   <div><strong>Hult Prize</strong><span>national round — NEXO</span></div>
   <div><strong>~200 Hz</strong><span>real-time IMU streaming</span></div>
   <div><strong>38–40%</strong><span>robotics cycle-time improvement</span></div>
-  <div><strong>4 Focus Areas</strong><span>AI · Robotics · Embedded · Autonomy</span></div>
+  <div><strong>300,000+</strong><span>aerospace records processed per run</span></div>
 </section>
 
 <section id="projects" class="section container">
@@ -85,13 +85,14 @@
     </div>
     <div class="copy">
       <div class="meta">ROBOTICS + EMBEDDED · 2026</div>
-      <h3>LiDAR–IMU Autonomous Perception Platform</h3>
-      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python, with current work spanning sensor acquisition, point-cloud processing, terrain analysis, and ongoing SLAM development.</p>
+      <h3>Portable LiDAR–IMU Perception & Mapping Platform</h3>
+      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python. I built the sensing stack across power, Ethernet, logging, point-cloud processing, and mechanical integration, then field-tested it underground.</p>
       <h4>Validated pipeline</h4>
-      <p>LiDAR/IMU acquisition → PointCloud2 + ~200 Hz IMU streaming → filtering → voxel processing → height analysis → terrain / obstacle risk mapping.</p>
-      <h4>In development</h4>
-      <p>LiDAR–IMU motion compensation, scan matching, localization, SLAM, decision modeling, and eventual UAV deployment.</p>
-      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>SLAM</span><span>3D Mapping</span></div>
+      <p>LiDAR/IMU acquisition → PointCloud2 + ~200 Hz IMU streaming → confidence filtering → voxel downsampling → occupancy/density analysis → height-aware environment mapping.</p>
+      <h4>Current development</h4>
+      <p>Extending the platform toward LiDAR–IMU SLAM and sensor-fusion workflows for localization and autonomous navigation.</p>
+      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>Point Clouds</span><span>3D Mapping</span><span>Field Testing</span></div>
+      <div class="project-actions"><span class="award">Underground field-tested</span></div>
     </div>
   </article>
 
@@ -101,24 +102,32 @@
     <figure><img src="assets/lidar-risk-5cm.png" alt="Height-aware terrain risk map"><figcaption>Height-aware risk map: flat, caution, and obstacle regions.</figcaption></figure>
   </div>
 
-  <article class="project compact">
+  <article class="project">
+    <div class="visual image-wrap">
+      <img src="assets/fpv-uav-main.png" alt="Custom 5-inch FPV UAV showing carbon frame, motors, flight electronics, and wiring">
+    </div>
     <div class="copy">
       <div class="meta">UAV HARDWARE · 2026</div>
       <h3>5-inch FPV UAV Build & Integration</h3>
-      <p>Built a component-level FPV quadrotor including the carbon frame, F4 flight controller, 45A ESC, brushless motors, FPV system, power wiring, soldering, and mechanical integration — as a platform for future autonomous sensing work.</p>
-      <div class="tags"><span>Flight Controller</span><span>ESC</span><span>FPV</span><span>Soldering</span><span>CAD</span><span>3D Printing</span></div>
+      <p>Built and integrated a custom 5-inch FPV quadrotor from component level, including the carbon-fiber airframe, F4 flight controller, 45A ESC, brushless motors, FPV camera/transmitter, power wiring, soldering, and mechanical integration.</p>
+      <h4>Engineering work</h4>
+      <p>Performed electrical integration, component mounting, wiring, soldering, mechanical assembly, and system-level troubleshooting across the UAV platform.</p>
+      <div class="tags"><span>Flight Controller</span><span>ESC</span><span>BLDC Motors</span><span>FPV</span><span>Soldering</span><span>Wiring</span><span>System Integration</span></div>
     </div>
-    <div class="visual small placeholder">Drone photo coming later</div>
   </article>
 
-  <article class="project compact">
+  <div class="gallery fpv-gallery">
+    <figure><img src="assets/fpv-uav-main.png" alt="5-inch FPV UAV side view"><figcaption>Component-level FPV UAV build showing electronics, motors, and wiring integration.</figcaption></figure>
+    <figure><img src="assets/fpv-uav-top.png" alt="5-inch FPV UAV top view"><figcaption>Top view of the carbon-fiber frame, power wiring, and flight electronics.</figcaption></figure>
+  </div>
+
+  <article class="project compact text-only">
     <div class="copy">
-      <div class="meta">COMPETITION ROBOTICS</div>
+      <div class="meta">COMPETITION ROBOTICS · 2019–2023</div>
       <h3>FRC / FTC — Vision, Controls & Mechanism Development</h3>
       <p>Designed and iterated a roller-intake mechanism that reduced pickup-to-placement cycle time by 38–40%, and implemented AprilTag-based autonomous vision in Java for field-target detection and parking behavior.</p>
       <div class="tags"><span>Java</span><span>Controls</span><span>AprilTag</span><span>CAD</span><span>Rapid Prototyping</span></div>
     </div>
-    <div class="visual small placeholder">Robot / intake photo coming later</div>
   </article>
 </section>
 
@@ -126,12 +135,19 @@
   <div class="container">
     <p class="eyebrow">EXPERIENCE</p>
     <h2>Engineering in practice</h2>
-    <div class="experience single">
+    <div class="experience">
       <div>
         <h3>National Research Council of Canada</h3>
         <p class="muted">Aerospace Research Centre · Research Assistant · Sep 2024 – Apr 2025</p>
-        <p>Developed Python-based engineering analysis workflows for large aerospace fatigue datasets and automated signal-processing and statistical analysis tasks.</p>
-        <p>Work supported an intellectual-property filing and industry technology transfer. Project code, datasets, and internal research materials are not published.</p>
+        <p>Developed a Python engineering-analysis framework processing 300,000+ aerospace test records per run in under 20 minutes, replacing workflows that previously required weeks of manual analysis.</p>
+        <p>Implemented signal-processing, threshold-estimation, sensitivity-analysis, and validation methods with ~98% agreement to reference estimates. Work supported an intellectual-property filing and industry technology transfer.</p>
+        <p>Also performed hands-on aerospace testing involving impact testing, ultrasonic inspection, strain-gauge instrumentation, sensor data acquisition, and environmental degradation experiments.</p>
+      </div>
+      <div>
+        <h3>The STEAM Project</h3>
+        <p class="muted">STEAM Program Instructor · May 2026 – Aug 2026</p>
+        <p>Developed and delivered 20+ robotics and STEAM projects across prototyping, BOM planning, 3D printing, and classroom deployment.</p>
+        <p>Taught approximately 120 students across four program sections and iterated activities based on classroom feedback.</p>
       </div>
     </div>
   </div>
