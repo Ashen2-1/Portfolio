@@ -4,166 +4,317 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tom Li | AI · Robotics · Embedded Systems</title>
-<meta name="description" content="Tom Li — Computer Engineering student at the University of Waterloo working across AI, robotics, embedded systems, and autonomous sensing.">
+<meta name="description" content="Tom Li — Computer Engineering student at the University of Waterloo building AI systems, LiDAR–IMU perception platforms, and embedded software. Includes real field data from Greig's Caves.">
+<meta property="og:title" content="Tom Li | AI · Robotics · Embedded Systems">
+<meta property="og:description" content="Portable LiDAR–IMU platform field-tested at Greig's Caves: 406M points, 11 sessions, interactive 3D maps.">
+<meta property="og:image" content="assets/field/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <nav class="container">
-    <a class="brand" href="#top">TL</a>
+<header class="topbar">
+  <nav class="container nav">
+    <a class="brand" href="#top" aria-label="Tom Li — home"><span>TL</span></a>
     <div class="links">
+      <a href="#field">Field Test</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#about">About</a>
-      <a href="mailto:c85li@uwaterloo.ca">Contact</a>
+      <a class="nav-cta" href="mailto:c85li@uwaterloo.ca">Contact</a>
     </div>
   </nav>
 </header>
 
 <main id="top">
+
+<!-- ============ HERO ============ -->
 <section class="hero container">
-  <div>
-    <p class="eyebrow">COMPUTER ENGINEERING @ WATERLOO</p>
-    <h1>I build <span>AI systems</span>, robotics perception platforms, and embedded software.</h1>
-    <p class="sub">I work across multimodal AI, full-stack software, robotics, LiDAR/IMU sensing, and rapid prototyping — turning technical ideas into working systems that can be tested in the real world.</p>
+  <div class="hero-copy">
+    <p class="eyebrow">Computer Engineering @ Waterloo</p>
+    <h1>I build <em>AI systems</em>, robotics perception platforms, and embedded software.</h1>
+    <p class="sub">Multimodal AI, full-stack software, LiDAR/IMU sensing, and rapid prototyping. I like turning ideas into systems I can take outside and test, like the handheld LiDAR rig I carried through Greig's Caves.</p>
     <div class="actions">
-      <a class="button primary" href="#projects">View projects</a>
-      <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <a class="button" href="mailto:c85li@uwaterloo.ca">Email</a>
+      <a class="button primary" href="#field">See the field test →</a>
+      <a class="button" href="#projects">All projects</a>
+      <a class="button ghost" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
     </div>
+    <dl class="focus">
+      <div><dt>AI</dt><dd>PyTorch · RAG · VLM · FastAPI · React</dd></div>
+      <div><dt>Robotics</dt><dd>ROS 2 · LiDAR · IMU · Point clouds · Odometry</dd></div>
+      <div><dt>Embedded</dt><dd>C++ · Linux · Raspberry Pi · STM32</dd></div>
+    </dl>
   </div>
-  <aside class="focus-card">
-    <p class="eyebrow">CURRENT FOCUS</p>
-    <h3>AI + Autonomous Systems</h3>
-    <p><b>AI</b><br>PyTorch · RAG · VLM · FastAPI · React</p>
-    <p><b>Robotics</b><br>ROS 2 · LiDAR · IMU · Point Clouds · 3D Mapping</p>
-    <p><b>Embedded</b><br>C++ · Linux · Raspberry Pi · STM32</p>
-  </aside>
+  <figure class="hero-photo">
+    <img src="assets/field/hero.jpg" alt="Tom scanning a limestone cave arch with a handheld LiDAR rig">
+    <figcaption><span class="dot"></span>Field test · Greig's Caves, Ontario · Sep 2026</figcaption>
+  </figure>
 </section>
 
-<section class="stats container">
-  <div><strong>Hult Prize</strong><span>national round — NEXO</span></div>
-  <div><strong>~200 Hz</strong><span>real-time IMU streaming</span></div>
+<section class="stats container" aria-label="Highlights">
+  <div><strong>406M</strong><span>LiDAR points logged in the field</span></div>
+  <div><strong>200 Hz</strong><span>IMU, 406k samples, 0 packets dropped</span></div>
+  <div><strong>Hult Prize</strong><span>national round, NEXO</span></div>
+  <div><strong>300k+</strong><span>aerospace records per run at NRC</span></div>
   <div><strong>38–40%</strong><span>robotics cycle-time improvement</span></div>
-  <div><strong>300,000+</strong><span>aerospace records processed per run</span></div>
 </section>
 
-<section id="projects" class="section container">
-  <p class="eyebrow">SELECTED WORK</p>
-  <h2>Projects</h2>
-
-  <article class="project featured-project">
-    <div class="visual image-wrap">
-      <img src="assets/nexo-workspace.png" alt="NEXO multimodal research workspace with uploaded PDFs and AI chat">
+<!-- ============ FIELD TEST ============ -->
+<section id="field" class="section field">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Featured · Field Test 01</p>
+      <h2>Mapping Greig's Caves with a handheld LiDAR–IMU rig</h2>
+      <p class="lede">On September 4, 2026 I took my portable sensing platform (Livox Mid-360S, its built-in IMU, a Raspberry Pi camera, and a Pi-based button logger) into the limestone caves of the Niagara Escarpment. I recorded 11 sessions there, plus a follow-up session on Sep 7. Then I wrote a packet decoder and a LiDAR–inertial odometry pipeline to turn the raw logs into the 3D maps below.</p>
     </div>
+
+    <div class="mosaic">
+      <figure class="m-a"><img src="assets/field/team.jpg" alt="Two team members on a forest trail, one holding the LiDAR rig and one monitoring on a laptop" loading="lazy"><figcaption>Pre-scan check on the trail. Logger status on the laptop</figcaption></figure>
+      <figure class="m-b"><img src="assets/field/helmet.jpg" alt="Scanning inside a narrow cave passage wearing a helmet" loading="lazy"><figcaption>Inside a narrow passage</figcaption></figure>
+      <figure class="m-c"><img src="assets/field/wall.jpg" alt="Raising the LiDAR rig toward a rock wall" loading="lazy"><figcaption>Sweeping a rock face</figcaption></figure>
+      <figure class="m-d"><img src="assets/field/crawl.jpg" alt="Scanning under a low rock overhang" loading="lazy"><figcaption>Low-clearance overhang</figcaption></figure>
+      <figure class="m-e"><img src="assets/field/arch.jpg" alt="Cave arch opening onto the forest" loading="lazy"><figcaption>One of the scanned arches</figcaption></figure>
+    </div>
+
+    <!-- data at a glance -->
+    <div class="glance">
+      <div><strong>12</strong><span>recording sessions</span></div>
+      <div><strong>33.9<small> min</small></strong><span>of synchronized data</span></div>
+      <div><strong>406<small> M</small></strong><span>LiDAR points (~200k pts/s)</span></div>
+      <div><strong>406<small> k</small></strong><span>IMU samples at 200.0 Hz</span></div>
+      <div><strong>0</strong><span>packets dropped by kernel</span></div>
+      <div><strong>21<small> GB</small></strong><span>raw pcap + video logged</span></div>
+    </div>
+
+    <!-- viewer -->
+    <div class="viewer-card" id="viewer">
+      <div class="viewer-top">
+        <div>
+          <p class="eyebrow">Interactive · real data</p>
+          <h3 id="pc-title">Registered point cloud</h3>
+          <p class="viewer-sub" id="pc-sub">Drag to orbit, scroll or pinch to zoom.</p>
+        </div>
+        <div class="seg" role="tablist" id="pc-tabs" aria-label="Choose session"></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="pc-canvas" aria-label="3D LiDAR point cloud of a cave section"></canvas>
+        <div class="pc-loading" id="pc-loading">Loading points…</div>
+        <div class="pc-legend">
+          <span>Height</span><i class="ramp"></i><span id="pc-hmin">low</span><span>→</span><span id="pc-hmax">high</span>
+        </div>
+        <div class="pc-controls">
+          <button type="button" id="pc-color" aria-pressed="false">Color: height</button>
+          <button type="button" id="pc-cut" aria-pressed="false">Ceiling: shown</button>
+          <button type="button" id="pc-traj" aria-pressed="true">Trajectory: on</button>
+          <button type="button" id="pc-spin" aria-pressed="true">Auto-rotate: on</button>
+          <button type="button" id="pc-reset">Reset view</button>
+        </div>
+      </div>
+      <div class="viewer-meta" id="pc-meta"></div>
+    </div>
+
+    <!-- story -->
+    <div class="story">
+      <article class="finding">
+        <span class="num">01</span>
+        <h3>A redundant logger saved the dataset</h3>
+        <p>My logger wrote three streams at once: the Livox SDK2 recorder, a raw <code>tcpdump</code> capture of every LiDAR/IMU UDP packet, and H.264 video at 1536×864, 30 fps. In <b>6 of 12 sessions</b> the SDK lost contact with the sensor ("Detection lidars failed") and its files stopped early. The raw pcap kept recording, and a steady ~200k pts/s across the whole capture shows those streams are complete. I wrote a pcap decoder for the Livox packet format and rebuilt every session from it.</p>
+      </article>
+      <article class="finding">
+        <span class="num">02</span>
+        <h3>"Static" scans weren't static, so motion had to be modeled</h3>
+        <p>The IMU shows that even the "static" sessions were handheld sweeps, averaging 24–53 °/s of rotation. Stacking those points naively smears the cave walls. So the pipeline integrates the 200 Hz gyro to undo the rotation inside each 100 ms frame (deskew) and uses it as the rotation prior for registration.</p>
+      </article>
+      <article class="finding">
+        <span class="num">03</span>
+        <h3>LiDAR–inertial odometry, built from scratch</h3>
+        <p>Each deskewed frame is aligned to a rolling 25 cm voxel map with robust point-to-point ICP (Gauss–Newton with a Geman–McClure kernel and an adaptive threshold, in the style of KISS-ICP), using a constant-velocity prior for translation. I wrote it in Python with NumPy and SciPy and ran it offline on all 12 sessions.</p>
+      </article>
+    </div>
+
+    <!-- analysis -->
+    <div class="analysis">
+      <figure class="chart-card">
+        <div class="chart-head">
+          <h3>How much each session was moving</h3>
+          <p>Rotation rate from the IMU gyro (°/s): the bar is the mean, the tick is the 95th percentile.</p>
+          <div class="legend"><span><i class="sw sw-a"></i>Static, handheld sweep</span><span><i class="sw sw-b"></i>Walking</span></div>
+        </div>
+        <div id="imu-chart" class="hbar" role="img" aria-label="Per-session gyro rotation rate"></div>
+        <details class="table-view"><summary>View as table</summary><div id="imu-table"></div></details>
+      </figure>
+      <figure class="chart-card">
+        <div class="chart-head">
+          <h3>Estimated walking paths</h3>
+          <p>Top-down odometry trajectories, shown at the same scale. Each starts at the dot.</p>
+        </div>
+        <div id="traj-grid" class="traj-grid"></div>
+      </figure>
+    </div>
+
+    <div class="renders">
+      <figure><img src="assets/field/render-top.jpg" alt="Plan view of the registered cave chamber with the ceiling removed, showing boulders on the floor and the walking path" loading="lazy"><figcaption>Plan view of the cave chamber (Sep 4, 11:38) with the ceiling cut away so the boulder floor shows. Colored by height, with the estimated walking path in white.</figcaption></figure>
+      <figure><img src="assets/field/render-side.png" alt="Cross-section of the limestone overhang showing ceiling, floor, and trees" loading="lazy"><figcaption>A 3 m-thick cross-section through the overhang sweep (Sep 4, 11:32): the rock ceiling, the floor below it, and trees at the entrance.</figcaption></figure>
+    </div>
+
+    <div class="pipeline">
+      <p class="eyebrow">Pipeline</p>
+      <ol>
+        <li><b>Capture</b><span>Mid-360S → Ethernet → Pi · SDK2 + raw pcap + camera</span></li>
+        <li><b>Decode</b><span>Custom parser for Livox UDP: 96 pts/packet, IMU at 200 Hz</span></li>
+        <li><b>Deskew</b><span>Gyro integration (SO(3)), per-point rotation to frame start</span></li>
+        <li><b>Register</b><span>Robust ICP to a local voxel map, IMU + constant-velocity priors</span></li>
+        <li><b>Map</b><span>Gravity-aligned clouds, height maps, trajectories</span></li>
+      </ol>
+    </div>
+
+    <div class="honest">
+      <div>
+        <h4>Validated</h4>
+        <p>Field logging with redundant capture · complete packet-level decode · IMU motion analysis · IMU-aided deskew · frame-to-map odometry producing coherent 3D maps of the cave sections.</p>
+      </div>
+      <div>
+        <h4>Next</h4>
+        <p>Loop closure and pose-graph optimization · measuring drift against surveyed control points · LiDAR–camera calibration for colorized maps · a real-time ROS 2 version on the Pi · UAV deployment.</p>
+      </div>
+    </div>
+
+    <details class="sessions">
+      <summary>All 12 sessions (raw-data summary)</summary>
+      <div id="session-table"></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section container">
+  <div class="section-head">
+    <p class="eyebrow">Selected work</p>
+    <h2>Projects</h2>
+  </div>
+
+  <article class="project">
+    <div class="visual"><img src="assets/nexo-workspace.png" alt="NEXO multimodal research workspace with uploaded PDFs and AI chat" loading="lazy"></div>
     <div class="copy">
-      <div class="meta">AI + FULL-STACK · 2026</div>
-      <h3>NEXO — Multimodal AI Research Platform</h3>
+      <div class="meta">AI + Full-stack · 2026</div>
+      <h3>NEXO: Multimodal AI Research Platform</h3>
       <p>A full-stack research environment that combines a visual workspace, source-grounded AI, document retrieval, and multimodal reasoning across documents and images.</p>
       <h4>My contribution</h4>
-      <p>Co-led the platform from product direction through AI/backend integration, connecting a React frontend to FastAPI/Python services and PostgreSQL-backed research workflows.</p>
+      <p>Co-led the platform from product direction through AI and backend integration, connecting a React frontend to FastAPI/Python services and PostgreSQL-backed research workflows.</p>
       <h4>AI pipeline</h4>
       <p>OCR → chunking → embeddings → vector retrieval → grounded generation, plus a 7B vision-language model using PyTorch and Hugging Face Transformers.</p>
       <div class="tags"><span>Python</span><span>PyTorch</span><span>FastAPI</span><span>React</span><span>PostgreSQL</span><span>RAG</span><span>VLM</span></div>
       <div class="project-actions">
-        <a class="button primary" href="https://nexo-art-research.vercel.app/" target="_blank" rel="noreferrer">Live Demo ↗</a>
-        <span class="award">Hult Prize National Round</span>
+        <a class="button primary" href="https://nexo-art-research.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a>
+        <span class="badge">Hult Prize National Round</span>
       </div>
     </div>
   </article>
-
-  <div class="gallery">
-    <figure><img src="assets/nexo-welcome.png" alt="NEXO welcome and onboarding page"><figcaption>Onboarding / product walkthrough</figcaption></figure>
-    <figure><img src="assets/nexo-canvas.png" alt="NEXO visual research canvas"><figcaption>Visual canvas for organizing research materials</figcaption></figure>
-    <figure><img src="assets/nexo-database.png" alt="NEXO database search"><figcaption>Academic source discovery</figcaption></figure>
-    <figure><img src="assets/nexo-chat.png" alt="NEXO source-grounded AI chat"><figcaption>Source-grounded question answering</figcaption></figure>
+  <div class="gallery g4">
+    <figure><img src="assets/nexo-welcome.png" alt="NEXO welcome and onboarding page" loading="lazy"><figcaption>Onboarding walkthrough</figcaption></figure>
+    <figure><img src="assets/nexo-canvas.png" alt="NEXO visual research canvas" loading="lazy"><figcaption>Visual research canvas</figcaption></figure>
+    <figure><img src="assets/nexo-database.png" alt="NEXO database search" loading="lazy"><figcaption>Academic source discovery</figcaption></figure>
+    <figure><img src="assets/nexo-chat.png" alt="NEXO source-grounded AI chat" loading="lazy"><figcaption>Source-grounded Q&amp;A</figcaption></figure>
   </div>
 
   <article class="project">
-    <div class="visual image-wrap">
-      <img src="assets/lidar-risk-5cm.png" alt="Height-aware LiDAR terrain risk map">
-    </div>
+    <div class="visual"><img src="assets/field/rig.jpg" alt="Handheld LiDAR rig being checked before a scan" loading="lazy"></div>
     <div class="copy">
-      <div class="meta">ROBOTICS + EMBEDDED · 2026</div>
-      <h3>Portable LiDAR–IMU Perception & Mapping Platform</h3>
-      <p>A portable 3D sensing platform built around a Livox Mid-360S, IMU, Raspberry Pi, ROS 2, C++, and Python. I built the sensing stack across power, Ethernet, logging, point-cloud processing, and mechanical integration, then field-tested it underground.</p>
+      <div class="meta">Robotics + Embedded · 2026</div>
+      <h3>Portable LiDAR–IMU Perception &amp; Mapping Platform</h3>
+      <p>The hardware and software behind the field test: a Livox Mid-360S with its IMU, a Raspberry Pi, and a camera, plus portable power, Ethernet networking, a button-controlled headless logger, and a 3D-printed mount. Built with ROS 2, C++, and Python.</p>
       <h4>Validated pipeline</h4>
-      <p>LiDAR/IMU acquisition → PointCloud2 + ~200 Hz IMU streaming → confidence filtering → voxel downsampling → occupancy/density analysis → height-aware environment mapping.</p>
+      <p>LiDAR/IMU acquisition → PointCloud2 + 200 Hz IMU streaming → confidence filtering → voxel downsampling → occupancy and density analysis → height-aware terrain risk mapping.</p>
       <h4>Current development</h4>
-      <p>Extending the platform toward LiDAR–IMU SLAM and sensor-fusion workflows for localization and autonomous navigation.</p>
-      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>Point Clouds</span><span>3D Mapping</span><span>Field Testing</span></div>
-      <div class="project-actions"><span class="award">Underground field-tested</span></div>
+      <p>Loop closure and real-time LiDAR–IMU SLAM on the Pi, moving toward autonomous aerial perception.</p>
+      <div class="tags"><span>ROS 2</span><span>C++</span><span>Python</span><span>LiDAR</span><span>IMU</span><span>Point clouds</span><span>Odometry</span><span>Field testing</span></div>
+      <div class="project-actions"><a class="button" href="#field">Field results ↑</a><span class="badge">Underground field-tested</span></div>
     </div>
   </article>
-
-  <div class="gallery lidar-gallery">
-    <figure><img src="assets/lidar-imu-motion.png" alt="IMU motion feedback plot"><figcaption>IMU motion-state analysis using gyroscope and acceleration signals.</figcaption></figure>
-    <figure><img src="assets/lidar-height-5cm.png" alt="5 cm voxel height-range map"><figcaption>5 cm voxel height-range map for local vertical variation.</figcaption></figure>
-    <figure><img src="assets/lidar-risk-5cm.png" alt="Height-aware terrain risk map"><figcaption>Height-aware risk map: flat, caution, and obstacle regions.</figcaption></figure>
+  <div class="gallery g3">
+    <figure><img src="assets/lidar-imu-motion.png" alt="IMU motion feedback plot" loading="lazy"><figcaption>IMU motion-state analysis from gyro and acceleration.</figcaption></figure>
+    <figure><img src="assets/lidar-height-5cm.png" alt="5 cm voxel height-range map" loading="lazy"><figcaption>5 cm voxel height-range map.</figcaption></figure>
+    <figure><img src="assets/lidar-risk-5cm.png" alt="Height-aware terrain risk map" loading="lazy"><figcaption>Height-aware risk map: flat, caution, obstacle.</figcaption></figure>
   </div>
 
   <article class="project">
-    <div class="visual image-wrap">
-      <img src="assets/fpv-uav-main.png" alt="Custom 5-inch FPV UAV showing carbon frame, motors, flight electronics, and wiring">
-    </div>
+    <div class="visual"><img src="assets/fpv-uav-main.jpg" alt="Custom 5-inch FPV UAV showing carbon frame, motors, flight electronics, and wiring" loading="lazy"></div>
     <div class="copy">
-      <div class="meta">UAV HARDWARE · 2026</div>
-      <h3>5-inch FPV UAV Build & Integration</h3>
-      <p>Built and integrated a custom 5-inch FPV quadrotor from component level, including the carbon-fiber airframe, F4 flight controller, 45A ESC, brushless motors, FPV camera/transmitter, power wiring, soldering, and mechanical integration.</p>
+      <div class="meta">UAV hardware · 2026</div>
+      <h3>5-inch FPV UAV Build &amp; Integration</h3>
+      <p>Built a custom 5-inch FPV quadrotor from individual components: carbon-fiber airframe, F4 flight controller, 45A ESC, brushless motors, FPV camera and transmitter, power wiring, soldering, and mechanical integration. It's the future carrier for the LiDAR platform.</p>
       <h4>Engineering work</h4>
-      <p>Performed electrical integration, component mounting, wiring, soldering, mechanical assembly, and system-level troubleshooting across the UAV platform.</p>
-      <div class="tags"><span>Flight Controller</span><span>ESC</span><span>BLDC Motors</span><span>FPV</span><span>Soldering</span><span>Wiring</span><span>System Integration</span></div>
+      <p>Electrical integration, component mounting, wiring, soldering, mechanical assembly, and system-level troubleshooting.</p>
+      <div class="tags"><span>Flight controller</span><span>ESC</span><span>BLDC motors</span><span>FPV</span><span>Soldering</span><span>System integration</span></div>
     </div>
   </article>
-
-  <div class="gallery fpv-gallery">
-    <figure><img src="assets/fpv-uav-main.png" alt="5-inch FPV UAV side view"><figcaption>Component-level FPV UAV build showing electronics, motors, and wiring integration.</figcaption></figure>
-    <figure><img src="assets/fpv-uav-top.png" alt="5-inch FPV UAV top view"><figcaption>Top view of the carbon-fiber frame, power wiring, and flight electronics.</figcaption></figure>
+  <div class="gallery g2">
+    <figure><img src="assets/fpv-uav-main.jpg" alt="5-inch FPV UAV side view" loading="lazy"><figcaption>Electronics, motors, and wiring.</figcaption></figure>
+    <figure><img src="assets/fpv-uav-top.jpg" alt="5-inch FPV UAV top view" loading="lazy"><figcaption>Top view of frame and power wiring.</figcaption></figure>
   </div>
 
-  <article class="project compact text-only">
+  <article class="project text-only">
     <div class="copy">
-      <div class="meta">COMPETITION ROBOTICS · 2019–2023</div>
-      <h3>FRC / FTC — Vision, Controls & Mechanism Development</h3>
-      <p>Designed and iterated a roller-intake mechanism that reduced pickup-to-placement cycle time by 38–40%, and implemented AprilTag-based autonomous vision in Java for field-target detection and parking behavior.</p>
-      <div class="tags"><span>Java</span><span>Controls</span><span>AprilTag</span><span>CAD</span><span>Rapid Prototyping</span></div>
+      <div class="meta">Competition robotics · 2019–2023</div>
+      <h3>FRC / FTC: Vision, Controls &amp; Mechanism Development</h3>
+      <p>Designed and iterated a roller-intake mechanism that cut pickup-to-placement cycle time by 38–40%, and implemented AprilTag-based autonomous vision in Java for field-target detection and parking.</p>
+      <div class="tags"><span>Java</span><span>Controls</span><span>AprilTag</span><span>CAD</span><span>Rapid prototyping</span></div>
     </div>
   </article>
 </section>
 
+<!-- ============ EXPERIENCE ============ -->
 <section id="experience" class="section alt">
   <div class="container">
-    <p class="eyebrow">EXPERIENCE</p>
-    <h2>Engineering in practice</h2>
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>Engineering in practice</h2>
+    </div>
     <div class="experience">
-      <div>
+      <div class="job">
+        <div class="when">Sep 2024 – Apr 2025</div>
         <h3>National Research Council of Canada</h3>
-        <p class="muted">Aerospace Research Centre · Research Assistant · Sep 2024 – Apr 2025</p>
-        <p>Developed a Python engineering-analysis framework processing 300,000+ aerospace test records per run in under 20 minutes, replacing workflows that previously required weeks of manual analysis.</p>
-        <p>Implemented signal-processing, threshold-estimation, sensitivity-analysis, and validation methods with ~98% agreement to reference estimates. Work supported an intellectual-property filing and industry technology transfer.</p>
-        <p>Also performed hands-on aerospace testing involving impact testing, ultrasonic inspection, strain-gauge instrumentation, sensor data acquisition, and environmental degradation experiments.</p>
+        <p class="muted">Aerospace Research Centre · Research Assistant</p>
+        <ul>
+          <li>Built a Python engineering-analysis framework that processes 300,000+ aerospace test records per run in under 20 minutes, replacing workflows that took weeks of manual analysis.</li>
+          <li>Implemented signal-processing, threshold-estimation, sensitivity-analysis, and validation methods with ~98% agreement to reference estimates. The work supported an IP filing and an industry technology transfer.</li>
+          <li>Hands-on testing: impact testing, ultrasonic inspection, strain-gauge instrumentation, data acquisition, and environmental degradation experiments.</li>
+        </ul>
       </div>
-      <div>
+      <div class="job">
+        <div class="when">May 2026 – Aug 2026</div>
         <h3>The STEAM Project</h3>
-        <p class="muted">STEAM Program Instructor · May 2026 – Aug 2026</p>
-        <p>Developed and delivered 20+ robotics and STEAM projects across prototyping, BOM planning, 3D printing, and classroom deployment.</p>
-        <p>Taught approximately 120 students across four program sections and iterated activities based on classroom feedback.</p>
+        <p class="muted">STEAM Program Instructor</p>
+        <ul>
+          <li>Developed and delivered 20+ robotics and STEAM projects, covering prototyping, BOM planning, 3D printing, and classroom deployment.</li>
+          <li>Taught about 120 students across four sections and iterated activities based on classroom feedback.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about" class="section container">
-  <p class="eyebrow">ABOUT</p>
-  <h2>Built across disciplines.</h2>
-  <p class="about">I’m a Computer Engineering co-op student at the University of Waterloo interested in AI systems, robotics, autonomous perception, and embedded software. I like projects where software has to interact with the real world: sensors, hardware, noisy data, users, and constraints.</p>
-  <div class="actions">
-    <a class="button primary" href="mailto:c85li@uwaterloo.ca">Contact me</a>
-    <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section container about-wrap">
+  <div>
+    <p class="eyebrow">About</p>
+    <h2>Built across disciplines.</h2>
+    <p class="about">I'm a Computer Engineering co-op student at the University of Waterloo, interested in AI systems, robotics, autonomous perception, and embedded software. I like projects where software has to meet the real world: sensors, hardware, noisy data, users, and constraints. Sometimes that means a cave.</p>
+    <div class="actions">
+      <a class="button primary" href="mailto:c85li@uwaterloo.ca">c85li@uwaterloo.ca</a>
+      <a class="button" href="https://github.com/Ashen2-1" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
   </div>
+  <figure class="about-photo"><img src="assets/field/portrait.jpg" alt="Tom checking the LiDAR rig in front of a mossy rock wall" loading="lazy"></figure>
 </section>
 </main>
 
-<footer class="container">Tom Li · Computer Engineering · University of Waterloo</footer>
+<footer class="container footer">
+  <span>Tom Li · Computer Engineering · University of Waterloo</span>
+  <span class="mono">v4 · Oct 2026</span>
+</footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>
